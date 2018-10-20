@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoundsCheck : MonoBehaviour {
+public class BoundsCheck : MonoBehaviour
+{
     [Header("Set in Inspector")]
     public float radius = 1f;
     public bool keepOnScreen = true;
@@ -26,26 +27,31 @@ public class BoundsCheck : MonoBehaviour {
         isOnScreen = true;
         offRight = offLeft = offUp = offDown = false;
 
-        if (pos.x > camWidth - radius){
+        if (pos.x > camWidth - radius)
+        {
             pos.x = camWidth - radius;
             offRight = true;
         }
 
-        if (pos.x < -camWidth + radius){
+        if (pos.x < -camWidth + radius)
+        {
             pos.x = -camWidth + radius;
             offLeft = true;
         }
 
-        if (pos.y > camHeight - radius) {
+        if (pos.y > camHeight - radius)
+        {
             pos.y = camHeight - radius;
             offUp = true;
         }
-        if (pos.y < -camHeight + radius){
+        if (pos.y < -camHeight + radius)
+        {
             pos.y = -camHeight + radius;
             offDown = true;
         }
         isOnScreen = !(offRight || offLeft || offUp || offDown);
-        if (keepOnScreen && !isOnScreen) {
+        if (keepOnScreen && !isOnScreen)
+        {
             transform.position = pos;
             isOnScreen = true;
             offRight = offLeft = offUp = offDown = false;
