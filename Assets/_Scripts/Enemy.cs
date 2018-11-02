@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
                 if (health <= 0)
                 {
                     if (!notifiedOfDestruction) {
-                       // Main.S.ShipDestroyed(this);
+                        Main.S.ShipDestroyed(this);
                        
                     }
                     notifiedOfDestruction = true;

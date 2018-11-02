@@ -40,7 +40,6 @@ public class Hero : MonoBehaviour
         weapons[0].SetType(WeaponType.blaster);
         //fireDelegate += TempFire;
 
-        Main.S.ShipDestroyed(e);
 
     }
     void Update()

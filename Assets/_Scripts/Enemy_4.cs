@@ -143,7 +143,7 @@ public class Enemy_4 : Enemy {
                 }
                 if (allDestroyed) {
 
-                    //Main.S.ShipDestroyed(this);
+                    Main.S.ShipDestroyed(this);
                     Destroy(this.gameObject);
                 }
                 Destroy(other);

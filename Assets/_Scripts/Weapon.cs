@@ -62,7 +62,9 @@ public class Weapon : MonoBehaviour {
 
     public void Fire()
     {
-        if (!gameObject.activeInHierarchy) return;
+        if (!gameObject.activeInHierarchy){
+            return;
+        } 
         if (Time.time - lastShotTime < def.delayBetweenShots) {
             return;
         }
